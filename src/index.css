@@ -1,0 +1,33 @@
+@import "tailwindcss";
+@plugin "../node_modules/daisyui/index.js";
+
+.active{
+    color:#78cc6d;
+    border-top: 2px solid #78cc6d;
+    border-bottom: 2px solid #78cc6d;
+    font-weight: 600;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #78cc6d;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #69b35f;
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #78cc6d transparent;
+}
