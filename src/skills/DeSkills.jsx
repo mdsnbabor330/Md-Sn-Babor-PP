@@ -1,21 +1,14 @@
-import { FaCss3Alt, FaGitAlt, FaHtml5, FaJava, FaJs,FaReact } from "react-icons/fa";
-import { VscVscode } from "react-icons/vsc";
 import { motion } from 'framer-motion';
-import { RiNextjsFill, RiTailwindCssFill } from "react-icons/ri";
-import { TbBrandCpp } from "react-icons/tb";
+import { TbBrandAdobeIllustrator, TbBrandAdobePhotoshop, TbBrandAdobeXd } from "react-icons/tb";
+import { FaFigma } from "react-icons/fa";
+import { SiCanva } from 'react-icons/si';
 
 const skills = [
-    { name: 'HTML5', percentage: 97, icon: FaHtml5 },
-    { name: 'CSS3', percentage: 96, icon: FaCss3Alt},
-    { name: 'Tailwind CSS', percentage: 95, icon: RiTailwindCssFill},
-    { name: 'JavaScript', percentage: 95, icon: FaJs },
-    { name: 'React.js', percentage: 90, icon: FaReact },
-    { name: 'Next.js', percentage: 70, icon: RiNextjsFill },
-    { name: 'C++', percentage: 90, icon: TbBrandCpp},
-    { name: 'Java', percentage: 85, icon: FaJava  },
-    { name: 'VS Code', percentage: 75, icon: VscVscode},
-    { name: 'Git', percentage: 80, icon:  FaGitAlt  },
-
+    { name: 'Figma', percentage: 85, icon: FaFigma },
+    { name: 'AI', percentage: 85, icon: TbBrandAdobeIllustrator },
+    { name: 'PS', percentage: 70, icon: TbBrandAdobePhotoshop},
+    { name: 'XD', percentage: 75, icon: TbBrandAdobeXd},
+    { name: 'Canva', percentage: 80, icon: SiCanva},
 ];
 const SkillCircle = ({ percentage, icon: Icon, name}) => {
     const radius = 35;
@@ -65,7 +58,7 @@ const SkillCircle = ({ percentage, icon: Icon, name}) => {
     );
 };
 
-const Skills = () => {
+const DeSkills = () => {
     // Duplicate the skills array to create a seamless infinite loop
     const duplicatedSkills = [...skills, ...skills, ...skills];
 
@@ -96,4 +89,4 @@ const Skills = () => {
     );
 };
 
-export default Skills;
+export default DeSkills;
