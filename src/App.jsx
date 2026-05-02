@@ -13,21 +13,22 @@ function App() {
     <>
       <Cursor />
       <Background />
-      <div className='min-h-screen w-full flex items-center justify-center bg-transparent lg:p-0'>
-        <div className='lg:h-[80vh] lg:w-[85vw] w-full max-w-7xl bg-[#222222] lg:border-2 border border-gray-50/20 lg:overflow-hidden flex lg:flex-row flex-col relative rounded-xl lg:rounded-none shadow-2xl shadow-black/50 lg:shadow-[0_0_40px_rgba(120,204,109,0.15)]'>
-          <Navbar></Navbar>
-          <div className='flex lg:flex-row flex-col flex-1 overflow-hidden'>
-            <Profile></Profile>
-            <div className='flex-1 overflow-y-auto relative custom-scrollbar pb-20 lg:pb-0'>
+      <div className='min-h-screen w-full flex items-center justify-center bg-transparent p-0 sm:p-4'>
+        <div className='w-full max-w-7xl bg-[#222222] border border-gray-50/20 flex flex-col lg:flex-row relative shadow-2xl shadow-black/50 lg:shadow-[0_0_40px_rgba(120,204,109,0.15)] lg:rounded-xl lg:h-[88vh] lg:border-2 overflow-hidden'>
+          <Navbar />
+          <div className='flex flex-col lg:flex-row flex-1 min-h-0 overflow-hidden'>
+            <Profile />
+            <div className='flex-1 overflow-y-auto relative custom-scrollbar pb-20 lg:pb-0 min-h-0'>
               <AnimatePresence mode='wait'>
                 <motion.div
                   key={location.pathname}
-                  initial={{ opacity: 0, x: 30, scale: 0.90 }}
-                  animate={{ opacity: 1, x: 0, scale: 1 }}
-                  transition={{ duration: 0.6, }}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -10 }}
+                  transition={{ duration: 0.4, ease: 'easeOut' }}
                   className='h-full w-full'
                 >
-                  <Outlet></Outlet>
+                  <Outlet />
                 </motion.div>
               </AnimatePresence>
             </div>
@@ -39,4 +40,3 @@ function App() {
 }
 
 export default App
-
