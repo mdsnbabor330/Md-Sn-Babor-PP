@@ -63,9 +63,7 @@ const Profile = memo(() => {
         {/* CTA buttons */}
         <div className="border-t border-gray-50/20 w-full flex h-12 lg:h-13">
           <a
-            href="/cv.pdf"
-            download
-            aria-label="Download CV"
+            href="/"
             className="flex flex-1 items-center justify-center gap-2 border-r border-gray-50/20 text-[#999999] hover:text-[#78cc6d] hover:bg-[#78cc6d]/5 transition-all duration-300 text-[11px] sm:text-xs font-bold tracking-widest uppercase"
           >
             Download CV <FaArrowDown size={11} />
