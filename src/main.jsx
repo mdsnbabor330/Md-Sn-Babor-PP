@@ -5,7 +5,6 @@ import './index.css'
 import App from './App.jsx'
 import About from './about/About.jsx'
 import Resume from './resume/Resume.jsx'
-import Skills from './skills/Skills.jsx'
 import Project from './project/Project.jsx'
 import Contact from './contact/Contact.jsx'
 
@@ -24,12 +23,9 @@ const router = createBrowserRouter([
         element: <Resume />
       },
       {
-        path: "/skills",
-        element: <Skills />
-      },
-      {
         path: "/portfolio",
-        element: <Project />
+        element: <Project />,
+        loader : ()=>fetch('/projectsData.json')
       },
       {
         path: "/contact",

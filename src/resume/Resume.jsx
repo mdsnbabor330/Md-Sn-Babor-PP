@@ -4,9 +4,9 @@ import Skills from "../skills/Skills";
 import DeSkills from "../skills/DeSkills";
 
 const ExperienceItem = ({ date, title, company, desc }) => (
-  <div className="relative pl-10 pb-12 border-l border-[#999999]/10 last:pb-0 group">
+  <div className="relative pl-8 lg:pl-10 pb-12 border-l border-[#999999]/10 last:pb-0 group">
     {/* Marker Dot */}
-    <div className="absolute left-[-5px] top-0 w-[9px] h-[9px] rounded-full bg-bg-body border-2 border-[#999999]/30 group-hover:border-[#78cc6d] transition-colors" />
+    <div className="absolute left-[-5px] top-0 w-[9px] h-[9px] rounded-full bg-[#222222] border-2 border-[#999999]/30 group-hover:border-[#78cc6d] transition-colors" />
 
     {/* Date Tag */}
     <div className="inline-block px-2 p-[2px] rounded-[2px] bg-[#78cc6d]/30 border border-[#999999]/30 text-[10px] text-[#ffffff] uppercase font-bold tracking-[1px] mb-4 group-hover:bg-[#78cc6d] group-hover:text-[#222222] transition-all duration-300">
@@ -30,7 +30,7 @@ const Resume = () => {
       <h2 className="text-2xl font-bold underline underline-offset-8 mb-4">
         Resu<span className="text-[#78cc6d]">me</span>
       </h2>
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 my-8">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 my-8">
         {/* Experience Column */}
         <div>
           <h3 className="flex items-center gap-1 text-[20px] font-bold mb-10 border-b border-[#999999]/10 pb-4 text-[#999999]">
