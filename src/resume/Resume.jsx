@@ -84,9 +84,12 @@ const educationItems = [
 const Resume = () => {
   return (
     <section className="p-4 sm:p-6 w-full" aria-label="Resume">
-      <h2 className="text-xl sm:text-2xl font-bold underline underline-offset-8 mb-5 sm:mb-6">
-        Resu<span className="text-[#78cc6d]">me</span>
-      </h2>
+      <div className="flex flex-col mb-10">
+        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white">
+          Resu<span className="text-[#78cc6d]">me</span>
+        </h2>
+        <div className="h-1 w-20 bg-[#78cc6d] mt-2 rounded-full" />
+      </div>
 
       {/* Experience + Education grid */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 mb-8 sm:mb-10">
@@ -118,17 +121,20 @@ const Resume = () => {
       </div>
 
       {/* Skills */}
-      <h2 className="text-xl sm:text-2xl font-bold underline underline-offset-8 mb-5">
-        My <span className="text-[#78cc6d]">Skills</span>
-      </h2>
+      <div className="flex flex-col mb-10">
+        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white">
+          My <span className="text-[#78cc6d]">Skills</span>
+        </h2>
+        <div className="h-1 w-20 bg-[#78cc6d] mt-2 rounded-full" />
+      </div>
 
-      <h3 className="uppercase font-semibold text-xs sm:text-sm text-[#999999] border-b border-[#78cc6d] pb-2 mb-1 tracking-wider">
-        Programming Skills
+      <h3 className="text-base sm:text-lg font-bold text-[#999999] border-b border-white/5 pb-3 mb-6 flex items-center gap-2">
+        <span className="text-[#78cc6d]">Programming</span> Skills
       </h3>
       <Skills />
 
-      <h3 className="uppercase font-semibold text-xs sm:text-sm text-[#999999] border-b border-[#78cc6d] pb-2 mb-1 tracking-wider mt-2">
-        Design Skills
+      <h3 className="text-base sm:text-lg font-bold text-[#999999] border-b border-white/5 pb-3 mb-6 flex items-center gap-2 mt-10">
+        <span className="text-[#78cc6d]">Design</span> Skills
       </h3>
       <DeSkills />
     </section>

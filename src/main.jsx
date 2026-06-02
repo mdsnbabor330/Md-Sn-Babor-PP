@@ -1,14 +1,15 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import {createBrowserRouter, RouterProvider } from 'react-router'
+import {createHashRouter, RouterProvider } from 'react-router'
 import './index.css'
 import App from './App.jsx'
 import About from './about/About.jsx'
 import Resume from './resume/Resume.jsx'
 import Project from './project/Project.jsx'
 import Contact from './contact/Contact.jsx'
+import ProjectDetails from './project/ProjectDetails.jsx'
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: "/",
     element: <App />,
@@ -16,19 +17,21 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <About />,
-        loader : ()=>fetch('/servicesData.json')
       },
       {
-        path: "/resume",
+        path: "resume",
         element: <Resume />
       },
       {
-        path: "/portfolio",
+        path: "portfolio",
         element: <Project />,
-        loader : ()=>fetch('/projectsData.json')
       },
       {
-        path: "/contact",
+        path: "portfolio/:id",
+        element: <ProjectDetails />,
+      },
+      {
+        path: "contact",
         element: <Contact />
       }
     ],

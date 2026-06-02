@@ -2,8 +2,8 @@ import { MdDeveloperMode } from "react-icons/md";
 import { IoIosColorPalette } from "react-icons/io";
 import { FaMagnifyingGlass } from "react-icons/fa6";
 import { GrAnnounce } from "react-icons/gr";
-import { useLoaderData } from "react-router";
 import { memo } from "react";
+import servicesData from "../data/servicesData";
 
 const iconMap = {
   MdDeveloperMode: <MdDeveloperMode />,
@@ -13,13 +13,16 @@ const iconMap = {
 };
 
 const About = () => {
-  const services = useLoaderData();
+  const services = servicesData;
 
   return (
     <section className="p-4 sm:p-6 w-full" aria-label="About Me">
-      <h2 className="text-xl sm:text-2xl font-bold underline underline-offset-8 mb-5 sm:mb-6">
-        About <span className="text-[#78cc6d]">Me</span>
-      </h2>
+      <div className="flex flex-col mb-10">
+        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white">
+          About <span className="text-[#78cc6d]">Me</span>
+        </h2>
+        <div className="h-1 w-20 bg-[#78cc6d] mt-2 rounded-full" />
+      </div>
 
       {/* Bio + Info */}
       <div className="flex flex-col md:flex-row mb-6 sm:mb-8 gap-5 sm:gap-6">
@@ -53,9 +56,12 @@ const About = () => {
       </div>
 
       {/* Services */}
-      <h2 className="text-xl sm:text-2xl font-bold underline underline-offset-8 mb-5">
-        My <span className="text-[#78cc6d]">Services</span>
-      </h2>
+      <div className="flex flex-col mb-10">
+        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white">
+          My <span className="text-[#78cc6d]">Services</span>
+        </h2>
+        <div className="h-1 w-20 bg-[#78cc6d] mt-2 rounded-full" />
+      </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5 pb-4">
         {services.map((service) => (

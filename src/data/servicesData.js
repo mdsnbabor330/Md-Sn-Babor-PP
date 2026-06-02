@@ -1,0 +1,28 @@
+const servicesData = [
+    {
+        "id": 1,
+        "icon": "MdDeveloperMode",
+        "title": "Web Development",
+        "desc": "Modern and mobile-ready website that will help you reach all of your marketing."
+    },
+    {
+        "id": 2,
+        "icon": "IoIosColorPalette",
+        "title": "Graphic Design",
+        "desc": "Creative and professional designs for your brand and business needs."
+    },
+    {
+        "id": 3,
+        "icon": "FaMagnifyingGlass",
+        "title": "SEO Marketing",
+        "desc": "Boost your visibility and rank higher on search engines with expert SEO."
+    },
+    {
+        "id": 4,
+        "icon": "GrAnnounce",
+        "title": "Digital Marketing",
+        "desc": "Comprehensive digital marketing strategies to grow your online presence."
+    }
+];
+
+export default servicesData;

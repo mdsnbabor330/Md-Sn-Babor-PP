@@ -81,9 +81,12 @@ const Contact = () => {
 
   return (
     <section className="p-4 sm:p-6 w-full" aria-label="Contact">
-      <h2 className="text-xl sm:text-2xl font-bold underline underline-offset-8 mb-5 sm:mb-7">
-        Get In <span className="text-[#78cc6d]">Touch</span>
-      </h2>
+      <div className="flex flex-col mb-10">
+        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white">
+          Get In <span className="text-[#78cc6d]">Touch</span>
+        </h2>
+        <div className="h-1 w-20 bg-[#78cc6d] mt-2 rounded-full" />
+      </div>
 
       {/* Google Map */}
       <div className="w-full h-48 sm:h-64 md:h-72 bg-[#252525] rounded-xl border border-gray-50/10 mb-7 sm:mb-9 overflow-hidden shadow-md shadow-black/30">

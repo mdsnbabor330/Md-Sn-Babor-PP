@@ -1,4 +1,4 @@
-[
+const projectsData = [
     {
         "id": 1,
         "name": "Keen Keeper",
@@ -95,4 +95,6 @@
         "repo": "https://github.com/mdsnbabor330/Legal-solutions-website.git",
         "img": "https://i.ibb.co.com/7dWZmzzK/Screenshot-2026-05-02-115641.png"
     }
-]
+];
+
+export default projectsData;
